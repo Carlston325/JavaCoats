@@ -1,0 +1,35 @@
+.background {
+    background-image: url(./assets/images/background.png);
+}
+
+.placeHolderImages {
+    background-image: url(./assets/images/placeholder-image-2.png);
+    width: 400px;
+    height: 400px;
+}
+
+.fontStyle {
+    font-family: 'Aclonica', sans-serif;
+    font-family: 'Sono', monospace;
+}
+
+.textCenterLayout {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titleStyle {
+    font-family: 'Lugrasimo', cursive;
+    
+    background-color: #f1cd00;
+    background-image: linear-gradient(180deg, #ffcfa7, rgba(196, 150, 0, 0.986), #913a01);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+
+    
