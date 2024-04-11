@@ -67,3 +67,30 @@ header > div {
   font-size: 20px;
   color: rgb(255 193 7);
 }
+
+footer {
+  background-color: #1616166e;
+  text-align: center;
+  height: 140px;
+  display: grid;
+  grid-template-columns: ;
+  gap: 10px;
+  color: white;
+}
+.externalLinks {
+  flex: 1;
+}
+.externalLinks > button {
+  color: white;
+  width: 24px;
+}
+.externalLinks > p {
+  font-size: 12px;
+}
+.copyright {
+  flex: 1;
+}
+.internalLinks {
+  display: flex;
+  flex: 1;
+}

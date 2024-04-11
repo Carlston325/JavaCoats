@@ -15,14 +15,17 @@ function Footer() {
       <footer className="card footer">
         <div className="externalLinks">
           <Button>
-            <XIcon /> Twitter
+            <XIcon />
           </Button>
+          <p>Twitter</p>
           <Button>
-            <InstagramIcon /> Instagram
+            <InstagramIcon />
           </Button>
+          <p>Instagram</p>
           <Button>
-            <FacebookIcon /> Facebook
+            <FacebookIcon />
           </Button>
+          <p>Facebook</p>
         </div>
         <div className="copyright">
           <p>
