@@ -1,0 +1,69 @@
+* {
+  font-family: "Aclonica", sans-serif;
+  font-family: "Sono", monospace;
+}
+body {
+  margin: 0;
+  background-color: #241f00;
+  background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+}
+
+header div .btn {
+  color: white;
+}
+
+header {
+  padding: 20px 40px;
+  background-color: #1616166e;
+}
+header > div {
+  border-bottom: 2px white solid;
+  display: flex;
+}
+.subHeading {
+  color: white;
+  flex: 2;
+}
+
+.hero {
+  background-image: url(./images/background.png);
+  text-align: center;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero > div {
+  padding: 20px;
+  border: 2px solid rgb(241, 205, 0);
+  width: 915px;
+  height: 320px;
+  background-color: #25252568;
+}
+.title {
+  font-family: "Lugrasimo", cursive;
+  font-size: 5rem;
+  background-color: rgb(241, 205, 0);
+  background-image: linear-gradient(
+    180deg,
+    #ffcfa7,
+    rgba(196, 150, 0, 0.986),
+    #913a01
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.hero > div p {
+  font-size: 16px;
+  color: white;
+}
+.hero > div p > span {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(255 193 7);
+}
