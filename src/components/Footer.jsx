@@ -28,20 +28,16 @@ function Footer() {
           <p>Facebook</p>
         </div>
         <div className="copyright">
-          <p>
-            <CopyrightIcon /> JavaCoats{new Date().getFullYear()}
-          </p>
+          <CopyrightIcon />
+          <p>JavaCoats{new Date().getFullYear()}</p>
         </div>
         <div className="internalLinks">
-          <p>
-            <QuestionAnswerIcon /> Enquires
-          </p>
-          <p>
-            <InfoIcon /> About us
-          </p>
-          <p>
-            <AlternateEmailIcon /> Contact us
-          </p>
+          <QuestionAnswerIcon />
+          <p>Enquires</p>
+          <InfoIcon />
+          <p>About us</p>
+          <AlternateEmailIcon />
+          <p>Contact us</p>
         </div>
       </footer>
     </>
