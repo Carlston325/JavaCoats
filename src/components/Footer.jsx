@@ -9,22 +9,41 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
+import { styled } from "@mui/material/styles";
+
+const BTN = styled(Button)({
+  fontSize: 12,
+  "&:hover": {
+    backgroundColor: "rgb(255 193 7)",
+    borderColor: "rgb(255 140 7)",
+    boxShadow: "none",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "#0062cc",
+    borderColor: "#005cbf",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
+
 function Footer() {
   return (
     <>
-      <footer className="card footer">
+      <footer>
         <div className="externalLinks">
-          <Button>
+          <BTN>
             <XIcon />
-          </Button>
+          </BTN>
           <p>Twitter</p>
-          <Button>
+          <BTN>
             <InstagramIcon />
-          </Button>
+          </BTN>
           <p>Instagram</p>
-          <Button>
+          <BTN>
             <FacebookIcon />
-          </Button>
+          </BTN>
           <p>Facebook</p>
         </div>
         <div className="copyright">

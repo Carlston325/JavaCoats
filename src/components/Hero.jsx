@@ -2,7 +2,7 @@ import AddDescrip from "./AddDescrip";
 
 function Hero() {
   return (
-    <div className="card hero">
+    <div className="hero">
       <div>
         <h1 className="title">JavaCoats</h1>
         <AddDescrip

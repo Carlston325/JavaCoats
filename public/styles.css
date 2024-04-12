@@ -30,14 +30,15 @@ header > div {
   text-align: center;
   height: 440px;
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   align-items: center;
 }
 .hero > div {
-  padding: 20px;
+  margin: 15px;
+  padding: 15px;
   border: 2px solid rgb(241, 205, 0);
-  width: 915px;
+  flex-basis: 950px;
   height: 320px;
   background-color: #25252568;
 }
@@ -68,6 +69,51 @@ header > div {
   color: rgb(255 193 7);
 }
 
+.enquiries {
+  margin: 5px;
+  padding: 10px;
+  height: 284px;
+  display: grid;
+  text-align: center;
+}
+.enquiries > h2 {
+  color: white;
+}
+.enquiries > form {
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.enquiries > form > button {
+  width: 64px;
+  position: relative;
+  left: 884px;
+  top: -26px;
+}
+.enquiries > form > button > svg {
+  color: rgb(255 193 7);
+  background-color: #241f00;
+  border: 2px solid rgb(255 193 7);
+  border-radius: 25%;
+}
+.enquiries > form > button :hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255 193 7);
+  border-color: rgb(255 193 7);
+}
+div.enquiries > form > p {
+  color: rgb(0, 224, 15);
+  position: relative;
+  top: -32%;
+}
+div.enquiries > form > p > svg {
+  position: relative;
+  left: 10px;
+  top: 6px;
+}
+
 footer {
   background-color: #1616166e;
   text-align: center;
@@ -77,13 +123,14 @@ footer {
   align-items: center;
   gap: 10px;
   color: white;
+  font-size: 14px;
 }
 footer p {
   margin: 0;
 }
 .externalLinks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(80px, 200px));
   grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
@@ -96,7 +143,7 @@ footer p {
 }
 .internalLinks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(80px, 200px));
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   align-items: end;
@@ -126,9 +173,6 @@ footer p {
   color: white;
   width: 24px;
 }
-.externalLinks > p {
-  font-size: 12px;
-}
 
 .internalLinks > svg:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -150,4 +194,7 @@ footer p {
 .internalLinks > p:nth-child(6) {
   grid-area: 2/3/3/4;
   align-self: start;
+}
+.internalLinks p {
+  line-height: 24px;
 }

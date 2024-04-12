@@ -6,7 +6,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 function Header() {
   return (
     <>
-      <header className="card">
+      <header>
         <div>
           <h2 className="subHeading">Java Coat</h2>
 
