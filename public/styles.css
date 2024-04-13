@@ -8,10 +8,6 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
 }
 
-header div .btn {
-  color: white;
-}
-
 header {
   padding: 20px 40px;
   background-color: #1616166e;
@@ -69,44 +65,93 @@ header > div {
   color: rgb(255 193 7);
 }
 
+.features {
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(22, 22, 22, 0.431);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(318px, 614px));
+  grid-template-rows: 320px 1fr;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.features div {
+  width: 100%;
+  margin: 10px;
+}
+.features img {
+  width: 316px;
+  height: 316px;
+  margin: 10px;
+  border: 1px solid rgb(255 193 7);
+}
+.features button {
+  background-color: rgb(255 193 7);
+  border-radius: 4px;
+}
+.features button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+.features #featureImage1 {
+  grid-area: 1/1/2/2;
+}
+.features #featureImage2 {
+  grid-area: 1/2/2/3;
+}
+.features #featureImage3 {
+  grid-area: 1/3/2/4;
+}
+.features #feature1 {
+  grid-area: 2/1/3/2;
+}
+.features #feature2 {
+  grid-area: 2/2/3/3;
+}
+.features #feature3 {
+  grid-area: 2/3/3/4;
+}
+
 .enquiries {
+  background-color: white;
   margin: 5px;
   padding: 10px;
-  height: 284px;
   display: grid;
   text-align: center;
 }
+.enquiries button {
+  background-color: rgb(255 193 7);
+  width: 64px;
+  height: 34px;
+  border-radius: 25px;
+  position: relative;
+  left: 90%;
+}
+.enquiries button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+}
 .enquiries > h2 {
-  color: white;
+  margin: 10px;
+  color: rgb(255 193 7);
 }
 .enquiries > form {
   margin: 10px;
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-.enquiries > form > button {
-  width: 64px;
-  position: relative;
-  left: 884px;
-  top: -26px;
-}
-.enquiries > form > button > svg {
-  color: rgb(255 193 7);
-  background-color: #241f00;
-  border: 2px solid rgb(255 193 7);
-  border-radius: 25%;
-}
-.enquiries > form > button :hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(255 193 7);
-  border-color: rgb(255 193 7);
+.enquiries > form ::placeholder {
+  color: rgb(255, 193, 7);
+  padding: 10px;
 }
 div.enquiries > form > p {
   color: rgb(0, 224, 15);
   position: relative;
-  top: -32%;
+  top: -20%;
 }
 div.enquiries > form > p > svg {
   position: relative;
@@ -115,7 +160,7 @@ div.enquiries > form > p > svg {
 }
 
 footer {
-  background-color: #1616166e;
+  background-color: rgba(22, 22, 22, 0.431);
   text-align: center;
   height: 140px;
   display: grid;
@@ -127,6 +172,7 @@ footer {
 }
 footer p {
   margin: 0;
+  font-size: 10px;
 }
 .externalLinks {
   display: grid;
@@ -135,18 +181,19 @@ footer p {
   justify-items: center;
 }
 .copyright {
-  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
+}
+.copyright p {
+  font-size: 14px;
 }
 .internalLinks {
   display: grid;
   grid-template-columns: repeat(3, minmax(80px, 200px));
   grid-template-rows: 1fr 1fr;
   justify-items: center;
-  align-items: end;
 }
 .externalLinks > button:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -174,27 +221,24 @@ footer p {
   width: 24px;
 }
 
-.internalLinks > svg:nth-child(1) {
+.internalLinks > button:nth-child(1) {
   grid-area: 1/1/2/2;
 }
 .internalLinks > p:nth-child(2) {
   grid-area: 2/1/3/2;
   align-self: start;
 }
-.internalLinks > svg:nth-child(3) {
+.internalLinks > button:nth-child(3) {
   grid-area: 1/2/2/3;
 }
 .internalLinks > p:nth-child(4) {
   grid-area: 2/2/3/3;
   align-self: start;
 }
-.internalLinks > svg:nth-child(5) {
+.internalLinks > button:nth-child(5) {
   grid-area: 1/3/2/4;
 }
 .internalLinks > p:nth-child(6) {
   grid-area: 2/3/3/4;
   align-self: start;
-}
-.internalLinks p {
-  line-height: 24px;
 }

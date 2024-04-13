@@ -1,10 +1,11 @@
 import { useState } from "react";
 import MailIcon from "@mui/icons-material/Mail";
-import Button from "@mui/material/Button";
+import BTN from "./BTN";
 import CheckIcon from "@mui/icons-material/Check";
 
 function Enquiry(props) {
   const [userEnquiry, setUserEnquiry] = useState({
+    email: "",
     subject: "",
     content: "",
   });
@@ -13,13 +14,24 @@ function Enquiry(props) {
     const { name, value } = e.target;
 
     setUserEnquiry((preValue) => {
-      if (name === "subject") {
+      if (name === "email") {
         return {
+          email: value,
+          subject: preValue.subject,
+          content: preValue.content,
+        };
+      } else if (name === "subject") {
+        return {
+          email: preValue.email,
           subject: value,
           content: preValue.content,
         };
-      } else {
-        return preValue;
+      } else if (name === "content") {
+        return {
+          email: preValue.email,
+          subject: preValue.subject,
+          content: value,
+        };
       }
     });
   }
@@ -34,40 +46,56 @@ function Enquiry(props) {
     setIsSubmitted(true);
   }
 
+  function inputs() {
+    return (
+      <>
+        <input
+          onChange={handleChange}
+          value={userEnquiry.email}
+          name="email"
+          placeholder="Your email"
+          required
+        />
+        <input
+          onChange={handleChange}
+          value={userEnquiry.subject}
+          name="subject"
+          placeholder="Subject"
+          required
+        />
+      </>
+    );
+  }
+
   return (
-    <div className="enquiries">
+    <div
+      className="enquiries"
+      style={{ height: isExpanded ? "416px" : "216px" }}
+    >
       <h2>Ask Us Here</h2>
       <form>
-        {isExpanded && (
-          <input
-            onChange={handleChange}
-            value={userEnquiry.subject}
-            name="subject"
-            placeholder="Subject"
-            required
-          />
-        )}
+        {isExpanded && inputs()}
 
         <textarea
           onClick={expand}
           onChange={handleChange}
           name="content"
           value={userEnquiry.content}
-          placeholder="Tell us..."
-          rows={isExpanded ? 6 : 1}
+          placeholder="Your message..."
+          rows={isExpanded ? 10 : 4}
           required
         />
-        <Button
+        <BTN
+          style={{ top: isExpanded ? "-10%" : "-24%" }}
           onClick={(e) => {
             e.preventDefault();
             submitted();
-            setUserEnquiry({ subject: "", content: "" });
+            setUserEnquiry({ email: "", subject: "", content: "" });
           }}
           variant="text"
-          className="btn"
         >
           <MailIcon />
-        </Button>
+        </BTN>
         {isSubmitted && (
           <p>
             <CheckIcon /> SUBMITTED

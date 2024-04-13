@@ -1,4 +1,5 @@
-import Button from "@mui/material/Button";
+import BTN from "./BTN";
+
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -8,25 +9,6 @@ import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 import CopyrightIcon from "@mui/icons-material/Copyright";
-
-import { styled } from "@mui/material/styles";
-
-const BTN = styled(Button)({
-  fontSize: 12,
-  "&:hover": {
-    backgroundColor: "rgb(255 193 7)",
-    borderColor: "rgb(255 140 7)",
-    boxShadow: "none",
-  },
-  "&:active": {
-    boxShadow: "none",
-    backgroundColor: "#0062cc",
-    borderColor: "#005cbf",
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-  },
-});
 
 function Footer() {
   return (
@@ -51,11 +33,17 @@ function Footer() {
           <p>JavaCoats{new Date().getFullYear()}</p>
         </div>
         <div className="internalLinks">
-          <QuestionAnswerIcon />
+          <BTN>
+            <QuestionAnswerIcon />
+          </BTN>
           <p>Enquires</p>
-          <InfoIcon />
+          <BTN>
+            <InfoIcon />
+          </BTN>
           <p>About us</p>
-          <AlternateEmailIcon />
+          <BTN>
+            <AlternateEmailIcon />
+          </BTN>
           <p>Contact us</p>
         </div>
       </footer>

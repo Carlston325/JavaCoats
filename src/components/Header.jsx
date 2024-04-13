@@ -1,4 +1,4 @@
-import Button from "@mui/material/Button";
+import BTN from "./BTN";
 import Inventory2Icon from "@mui/icons-material/Inventory2";
 import InfoIcon from "@mui/icons-material/Info";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
@@ -10,15 +10,15 @@ function Header() {
         <div>
           <h2 className="subHeading">Java Coat</h2>
 
-          <Button className="btn">
+          <BTN>
             <Inventory2Icon /> Products
-          </Button>
-          <Button className="btn">
+          </BTN>
+          <BTN>
             <InfoIcon /> About us
-          </Button>
-          <Button className="btn">
+          </BTN>
+          <BTN>
             <AlternateEmailIcon /> Contact us
-          </Button>
+          </BTN>
         </div>
       </header>
     </>
