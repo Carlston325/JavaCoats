@@ -1,14 +1,30 @@
 import { useState } from "react";
-import MailIcon from "@mui/icons-material/Mail";
 import BTN from "./BTN";
+import Axios from "axios";
+
+import MailIcon from "@mui/icons-material/Mail";
 import CheckIcon from "@mui/icons-material/Check";
 
-function Enquiry(props) {
+function Enquiry() {
   const [userEnquiry, setUserEnquiry] = useState({
     email: "",
     subject: "",
     content: "",
   });
+
+  function sendMail() {
+    // fetch("http://localhost:3000", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(userEnquiry),
+    // })
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  }
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -73,7 +89,11 @@ function Enquiry(props) {
       style={{ height: isExpanded ? "416px" : "216px" }}
     >
       <h2>Ask Us Here</h2>
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         {isExpanded && inputs()}
 
         <textarea
@@ -86,10 +106,11 @@ function Enquiry(props) {
           required
         />
         <BTN
+          type="submit"
           style={{ top: isExpanded ? "-10%" : "-24%" }}
           onClick={(e) => {
-            e.preventDefault();
             submitted();
+            sendMail();
             setUserEnquiry({ email: "", subject: "", content: "" });
           }}
           variant="text"
@@ -98,7 +119,7 @@ function Enquiry(props) {
         </BTN>
         {isSubmitted && (
           <p>
-            <CheckIcon /> SUBMITTED
+            <CheckIcon /> Submitted
           </p>
         )}
       </form>

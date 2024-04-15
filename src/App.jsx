@@ -1,7 +1,11 @@
+import React from "react";
+import features from "./components/webpage/features";
+
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Feature, { features } from "./components/Feature";
+import Feature from "./components/Feature";
 import Enquiry from "./components/Enquiry";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -22,6 +26,7 @@ function App() {
         })}
       </div>
       <Enquiry />
+
       <Footer />
     </>
   );

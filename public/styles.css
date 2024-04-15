@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  padding: 20px 40px;
+  padding: 10px 30px;
   background-color: #1616166e;
 }
 header > div {
@@ -24,7 +24,7 @@ header > div {
 .hero {
   background-image: url(./images/background.png);
   text-align: center;
-  height: 440px;
+  height: 480px;
   display: flex;
 
   justify-content: center;
@@ -66,8 +66,7 @@ header > div {
 }
 
 .features {
-  margin-top: 10px;
-  padding: 10px;
+  padding: 10px 30px;
   color: white;
   background-color: rgba(22, 22, 22, 0.431);
   display: grid;
@@ -79,7 +78,16 @@ header > div {
 }
 .features div {
   width: 100%;
-  margin: 10px;
+  margin: 16px;
+}
+.features div h3 {
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.features div p {
+  margin: 0;
+  padding: 10px;
 }
 .features img {
   width: 316px;
@@ -88,6 +96,7 @@ header > div {
   border: 1px solid rgb(255 193 7);
 }
 .features button {
+  margin-bottom: 10px;
   background-color: rgb(255 193 7);
   border-radius: 4px;
 }
@@ -116,8 +125,7 @@ header > div {
 
 .enquiries {
   background-color: white;
-  margin: 5px;
-  padding: 10px;
+  padding: 10px 20px;
   display: grid;
   text-align: center;
 }
