@@ -1,0 +1,11 @@
+{
+  "emails": [
+    {
+      "id": "dfbf",
+      "fromEmail": "crebel325@gmail.com",
+      "toEmail": "notslrac@gmail.com",
+      "subject": "Test Email",
+      "content": "This is a Test. HI!"
+    }
+  ]
+}

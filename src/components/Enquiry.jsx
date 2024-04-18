@@ -1,50 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BTN from "./BTN";
-import Axios from "axios";
+import axios from "../api/posts";
 
 import MailIcon from "@mui/icons-material/Mail";
-import CheckIcon from "@mui/icons-material/Check";
 
 function Enquiry() {
+  let enquiryFail = false;
+  const sendEmail = async () => {
+    try {
+      await axios.post("/emails", {
+        fromEmail: userEnquiry.fromEmail,
+        toEmail: userEnquiry.toEmail,
+        subject: userEnquiry.subject,
+        content: userEnquiry.content,
+      });
+    } catch (err) {
+      console.log(`Failed to make request ${err.message}`);
+      enquiryFail = err.message;
+    }
+  };
+
   const [userEnquiry, setUserEnquiry] = useState({
-    email: "",
+    fromEmail: "",
+    toEmail: "notslrac@gmail.com",
     subject: "",
     content: "",
   });
-
-  function sendMail() {
-    // fetch("http://localhost:3000", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(userEnquiry),
-    // })
-    //   .then((res) => {
-    //     return res.json();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-  }
 
   function handleChange(e) {
     const { name, value } = e.target;
 
     setUserEnquiry((preValue) => {
-      if (name === "email") {
+      if (name === "fromEmail") {
         return {
-          email: value,
+          fromEmail: value,
+          toEmail: "notslrac@gmail.com",
           subject: preValue.subject,
           content: preValue.content,
         };
       } else if (name === "subject") {
         return {
-          email: preValue.email,
+          fromEmail: preValue.fromEmail,
+          toEmail: "notslrac@gmail.com",
           subject: value,
           content: preValue.content,
         };
       } else if (name === "content") {
         return {
-          email: preValue.email,
+          fromEmail: preValue.fromEmail,
+          toEmail: "notslrac@gmail.com",
           subject: preValue.subject,
           content: value,
         };
@@ -60,6 +64,9 @@ function Enquiry() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   function submitted() {
     setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 1500);
   }
 
   function inputs() {
@@ -67,8 +74,8 @@ function Enquiry() {
       <>
         <input
           onChange={handleChange}
-          value={userEnquiry.email}
-          name="email"
+          value={userEnquiry.fromEmail}
+          name="fromEmail"
           placeholder="Your email"
           required
         />
@@ -89,6 +96,7 @@ function Enquiry() {
       style={{ height: isExpanded ? "416px" : "216px" }}
     >
       <h2>Ask Us Here</h2>
+      {isSubmitted && <p>{enquiryFail ? "❌" + enquiryFail : "✅Submitted"}</p>}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -110,18 +118,18 @@ function Enquiry() {
           style={{ top: isExpanded ? "-10%" : "-24%" }}
           onClick={(e) => {
             submitted();
-            sendMail();
-            setUserEnquiry({ email: "", subject: "", content: "" });
+            setUserEnquiry({
+              fromEmail: "",
+              toEmail: "notslrac@gmail.com",
+              subject: "",
+              content: "",
+            });
+            sendEmail();
           }}
           variant="text"
         >
           <MailIcon />
         </BTN>
-        {isSubmitted && (
-          <p>
-            <CheckIcon /> Submitted
-          </p>
-        )}
       </form>
     </div>
   );
