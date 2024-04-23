@@ -92,16 +92,13 @@ function Enquiry() {
 
   return (
     <div
+      id="askUs"
       className="enquiries"
       style={{ height: isExpanded ? "416px" : "216px" }}
     >
       <h2>Ask Us Here</h2>
       {isSubmitted && <p>{enquiryFail ? "❌" + enquiryFail : "✅Submitted"}</p>}
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
+      <form>
         {isExpanded && inputs()}
 
         <textarea
@@ -117,6 +114,8 @@ function Enquiry() {
           type="submit"
           style={{ top: isExpanded ? "-10%" : "-24%" }}
           onClick={(e) => {
+            console.log("SUBMITTED");
+            sendEmail();
             submitted();
             setUserEnquiry({
               fromEmail: "",
@@ -124,7 +123,7 @@ function Enquiry() {
               subject: "",
               content: "",
             });
-            sendEmail();
+            e.preventDefault();
           }}
           variant="text"
         >

@@ -1,10 +1,10 @@
 import AddDescrip from "./AddDescrip";
 
-function Hero() {
+function Hero(props) {
   return (
     <div className="hero">
       <div>
-        <h1 className="title">JavaCoats</h1>
+        <h1 className="title">{props.title}</h1>
         <AddDescrip
           spanTextOne="coffee"
           descripOne=" is not only a good beverage,"

@@ -11,6 +11,8 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <>
       <footer>
@@ -30,7 +32,7 @@ function Footer() {
         </div>
         <div className="copyright">
           <CopyrightIcon />
-          <p>JavaCoats{new Date().getFullYear()}</p>
+          <p>JavaCoats{year}</p>
         </div>
         <div className="internalLinks">
           <BTN>

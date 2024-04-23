@@ -20,6 +20,10 @@ header > div {
   color: white;
   flex: 2;
 }
+header > div button a {
+  color: white;
+  text-decoration: none;
+}
 
 .hero {
   background-image: url(./images/background.png);

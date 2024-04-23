@@ -10,15 +10,19 @@ function Header() {
         <div>
           <h2 className="subHeading">Java Coat</h2>
 
-          <BTN>
-            <Inventory2Icon /> Products
-          </BTN>
+          <a href="">
+            <BTN>
+              <Inventory2Icon /> Products
+            </BTN>
+          </a>
           <BTN>
             <InfoIcon /> About us
           </BTN>
-          <BTN>
-            <AlternateEmailIcon /> Contact us
-          </BTN>
+          <a href="#askUs">
+            <BTN>
+              <AlternateEmailIcon /> Contact us
+            </BTN>
+          </a>
         </div>
       </header>
     </>
