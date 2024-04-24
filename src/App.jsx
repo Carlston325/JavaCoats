@@ -1,34 +1,23 @@
-// import React from "react";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// import features from "./components/webpageDATA/features";
-// import Header from "./components/Header";
-// import Hero from "./components/Hero";
-// import Feature from "./components/Feature";
-// import Enquiry from "./components/Enquiry";
-// import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-// function App() {
-//   return (
-//     <>
-//       <Header />
-//       <Hero title="JavaCoats" />
-//       <div className="features">
-//         {features.map((feature, index) => {
-//           return (
-//             <Feature
-//               id={index + 1}
-//               key={index + 1}
-//               title={feature.title}
-//               descrip={feature.descrip}
-//               img={feature.img}
-//             />
-//           );
-//         })}
-//       </div>
-//       <Enquiry />
-//       <Footer />
-//     </>
-//   );
-// }
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+}
 
-// export default App;
+export default App;
