@@ -5,6 +5,7 @@ function AddDescrip(props) {
       {props.descripOne}
       <span>{props.spanTextTwo}</span>
       {props.descripTwo}
+      <span>{props.spanTextThree}</span>
     </p>
   );
 }

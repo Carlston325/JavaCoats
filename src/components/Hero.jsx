@@ -1,19 +1,10 @@
-import AddDescrip from "./AddDescrip";
-
-function Hero() {
+function Hero(props) {
   return (
     <div className="hero">
       <div>
-        <h1 className="title">JavaCoats</h1>
-        <AddDescrip
-          spanTextOne="coffee"
-          descripOne=" is not only a good beverage,"
-        />
-        <AddDescrip
-          descripOne="It makes a great "
-          spanTextTwo="skincare"
-          descripTwo=" remedy"
-        />
+        <h1 className="title">{props.title}</h1>
+        {props.lineOne}
+        {props.lineTwo}
       </div>
     </div>
   );

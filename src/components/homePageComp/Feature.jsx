@@ -1,4 +1,4 @@
-import BTN from "./BTN";
+import BTN from "../BTN";
 
 function Feature(props) {
   return (
@@ -8,7 +8,9 @@ function Feature(props) {
         <h3>{props.title}</h3>
         <p>{props.descrip}</p>
       </div>
-      <BTN id={"featureBTN" + props.id}>View Product</BTN>
+      <BTN id={"featureBTN" + props.id} href={"/product"+props.id} className="btn">
+        View Product
+      </BTN>
     </>
   );
 }

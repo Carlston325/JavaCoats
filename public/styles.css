@@ -1,6 +1,7 @@
 * {
   font-family: "Aclonica", sans-serif;
   font-family: "Sono", monospace;
+  color: white;
 }
 body {
   margin: 0;
@@ -19,6 +20,10 @@ header > div {
 .subHeading {
   color: white;
   flex: 2;
+}
+header > div button a {
+  color: white;
+  text-decoration: none;
 }
 
 .hero {
@@ -95,12 +100,12 @@ header > div {
   margin: 10px;
   border: 1px solid rgb(255 193 7);
 }
-.features button {
+.features .btn {
   margin-bottom: 10px;
   background-color: rgb(255 193 7);
   border-radius: 4px;
 }
-.features button:hover {
+.features .btn:hover {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
 }
@@ -178,6 +183,10 @@ footer {
   color: white;
   font-size: 14px;
 }
+footer .btn {
+  margin-bottom: 10px;
+  flex-direction: column;
+}
 footer p {
   margin: 0;
   font-size: 10px;
@@ -187,6 +196,13 @@ footer p {
   grid-template-columns: repeat(3, minmax(80px, 200px));
   grid-template-rows: 1fr 1fr;
   justify-items: center;
+}
+.externalLinks > .btn:hover svg {
+  background-color: rgb(255 193 7);
+  border-radius: 50%;
+}
+.externalLinks > a.btn:hover p{
+  color: rgb(255 193 7);
 }
 .copyright {
   display: flex;
@@ -203,50 +219,42 @@ footer p {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
-.externalLinks > button:nth-child(1) {
-  grid-area: 1/1/2/2;
+.internalLinks > .btn:hover svg {
+  background-color: rgb(255 193 7);
+  border-radius: 50%;
 }
-.externalLinks > p:nth-child(2) {
-  grid-area: 2/1/3/2;
-  align-self: start;
-}
-.externalLinks > button:nth-child(3) {
-  grid-area: 1/2/2/3;
-}
-.externalLinks > p:nth-child(4) {
-  grid-area: 2/2/3/3;
-  align-self: start;
-}
-.externalLinks > button:nth-child(5) {
-  grid-area: 1/3/2/4;
-}
-.externalLinks > p:nth-child(6) {
-  grid-area: 2/3/3/4;
-  align-self: start;
-}
-.externalLinks > button {
-  color: white;
-  width: 24px;
+.internalLinks > a.btn:hover p{
+  color: rgb(255 193 7);
 }
 
-.internalLinks > button:nth-child(1) {
+.externalLinks > .btn:nth-child(1) {
   grid-area: 1/1/2/2;
 }
-.internalLinks > p:nth-child(2) {
-  grid-area: 2/1/3/2;
-  align-self: start;
-}
-.internalLinks > button:nth-child(3) {
+
+.externalLinks > .btn:nth-child(2) {
   grid-area: 1/2/2/3;
 }
-.internalLinks > p:nth-child(4) {
-  grid-area: 2/2/3/3;
-  align-self: start;
-}
-.internalLinks > button:nth-child(5) {
+
+.externalLinks > .btn:nth-child(3) {
   grid-area: 1/3/2/4;
 }
-.internalLinks > p:nth-child(6) {
-  grid-area: 2/3/3/4;
-  align-self: start;
+.externalLinks > .btn:nth-child(4) {
+  grid-area: 2/1/3/2;
 }
+
+
+.internalLinks > .btn:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+
+.internalLinks > .btn:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+
+.internalLinks > .btn:nth-child(3) {
+  grid-area: 1/3/2/4;
+}
+.internalLinks > .btn:nth-child(4) {
+  grid-area: 2/1/3/2;
+}
+

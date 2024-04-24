@@ -1,36 +1,28 @@
-import React from "react";
-import features from "./components/webpageDATA/features";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Feature from "./components/Feature";
-import Enquiry from "./components/Enquiry";
-import Footer from "./components/Footer";
-import axios from "./api/posts";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import ProductOne from "./pages/ProductOne"
+import ProductTwo from "./pages/ProductTwo"
+import ProductThree from "./pages/ProductThree"
 
 function App() {
-  function post() {}
-
   return (
-    <>
-      <Header />
-      <Hero />
-      <div className="features">
-        {features.map((feature, index) => {
-          return (
-            <Feature
-              id={index + 1}
-              key={index + 1}
-              title={feature.title}
-              descrip={feature.descrip}
-              img={feature.img}
-            />
-          );
-        })}
-      </div>
-      <Enquiry post={post} />
-
-      <Footer />
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product1" element={<ProductOne />} />
+        <Route path="/product2" element={<ProductTwo />} />
+        <Route path="/product3" element={<ProductThree />} />
+      </Routes>
+    </Router>
   );
 }
 
