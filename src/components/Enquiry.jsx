@@ -125,7 +125,6 @@ function Enquiry() {
             });
             e.preventDefault();
           }}
-          variant="text"
         >
           <MailIcon />
         </BTN>

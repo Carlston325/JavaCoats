@@ -1,8 +1,7 @@
-import features from "../components/webpageDATA/features";
+import features from "../DB/features";
 import AddDescrip from "../components/AddDescrip";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Feature from "../components/Feature";
+import Feature from "../components/homePageComp/Feature";
 import Enquiry from "../components/Enquiry";
 import Footer from "../components/Footer";
 
