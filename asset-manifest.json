@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/JavaCoats/static/js/main.b5c02f9a.js",
-    "index.html": "/JavaCoats/index.html",
-    "main.b5c02f9a.js.map": "/JavaCoats/static/js/main.b5c02f9a.js.map"
+    "main.js": "/eCommerce/static/js/main.2fea62e6.js",
+    "index.html": "/eCommerce/index.html",
+    "main.2fea62e6.js.map": "/eCommerce/static/js/main.2fea62e6.js.map"
   },
   "entrypoints": [
-    "static/js/main.b5c02f9a.js"
+    "static/js/main.2fea62e6.js"
   ]
 }
