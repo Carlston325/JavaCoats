@@ -1,17 +1,17 @@
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import ProductOne from "./pages/ProductOne"
-import ProductTwo from "./pages/ProductTwo"
-import ProductThree from "./pages/ProductThree"
+import ProductOne from "./pages/ProductOne";
+import ProductTwo from "./pages/ProductTwo";
+import ProductThree from "./pages/ProductThree";
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/product2" element={<ProductTwo />} />
         <Route path="/product3" element={<ProductThree />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 

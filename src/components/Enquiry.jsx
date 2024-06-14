@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import BTN from "./BTN";
-import axios from "../api/posts";
+import axios from "axios";
 
 import MailIcon from "@mui/icons-material/Mail";
 
